@@ -62,7 +62,7 @@ function onProvinceClick(event) {
         const temperature = ((data.main.temp - 32) * (5/9)).toFixed(1);
         const description = data.weather[0].description;
         const iconCode = data.weather[0].icon;
-        const iconUrl = `http://openweathermap.org/img/w/${iconCode}.png`;
+        const iconUrl = `https://openweathermap.org/img/w/${iconCode}.png`;
         const message = `The current temperature in ${provinceTitle} is ${temperature}°C with ${description}.`;
         showModal(`${provinceTitle}`,`${temperature}`,`${description}`,`${iconUrl}`)
       } else {
