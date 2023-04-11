@@ -1,7 +1,9 @@
-const apiKey = 'c2eb58a53bf66a86592083b4cdb9d677';
+
 const colorScale = d3.scaleSequential().domain([40, 0]).interpolator(d3.interpolateRdYlBu);
 const paths = document.querySelectorAll('path');
 addProvinceClickHandlers(paths);
+
+
 
 
 function updatePaths() {
@@ -13,7 +15,7 @@ function updatePaths() {
 
   paths.each(function() {
     const provinceTitle = this.getAttribute('title');
-    const apiKey = 'c2eb58a53bf66a86592083b4cdb9d677';
+    const apiKey = "c2eb58a53bf66a86592083b4cdb9d677";
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${provinceTitle},USA&appid=${apiKey}&units=imperial`;
 
     fetch(apiUrl)
@@ -50,8 +52,7 @@ function addProvinceClickHandlers(paths) {
 
 function onProvinceClick(event) {
   const provinceTitle = event.target.getAttribute('title');
-
-  const apiKey = 'c2eb58a53bf66a86592083b4cdb9d677';
+  const apiKey = atob("YzJlYjU4YTUzYmY2NmE4NjU5MjA4M2I0Y2RiOWQ2Nzc=");
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${provinceTitle},USA&appid=${apiKey}&units=imperial`;
 
   fetch(apiUrl)
