@@ -16,7 +16,7 @@ function updatePaths() {
   paths.each(function() {
     const provinceTitle = this.getAttribute('title');
     const apiKey = "c2eb58a53bf66a86592083b4cdb9d677";
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${provinceTitle},USA&appid=${apiKey}&units=imperial`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${provinceTitle},USA&appid=${apiKey}&units=imperial&lang=es`;
 
     fetch(apiUrl)
       .then(response => response.json())
