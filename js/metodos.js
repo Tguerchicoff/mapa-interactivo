@@ -16,7 +16,7 @@ function updatePaths() {
   paths.each(function() {
     const provinceTitle = this.getAttribute('title');
     const apiKey = "c2eb58a53bf66a86592083b4cdb9d677";
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${provinceTitle},USA&appid=${apiKey}&units=imperial&lang=es`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${provinceTitle},USA&appid=${apiKey}&units=imperial`;
 
     fetch(apiUrl)
       .then(response => response.json())
@@ -53,7 +53,7 @@ function addProvinceClickHandlers(paths) {
 function onProvinceClick(event) {
   const provinceTitle = event.target.getAttribute('title');
   const apiKey = atob("YzJlYjU4YTUzYmY2NmE4NjU5MjA4M2I0Y2RiOWQ2Nzc=");
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${provinceTitle},USA&appid=${apiKey}&units=imperial`;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${provinceTitle},USA&appid=${apiKey}&units=imperial&lang=es`;
 
   fetch(apiUrl)
     .then(response => response.json())
