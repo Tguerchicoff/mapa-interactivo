@@ -53,7 +53,7 @@ function addProvinceClickHandlers(paths) {
 function onProvinceClick(event) {
   const provinceTitle = event.target.getAttribute('title');
   const apiKey = atob("YzJlYjU4YTUzYmY2NmE4NjU5MjA4M2I0Y2RiOWQ2Nzc=");
-  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${provinceTitle},USA&appid=${apiKey}&units=imperial`;
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${provinceTitle},USA&appid=${apiKey}&units=imperial&lang=es`;
 
   fetch(apiUrl)
     .then(response => response.json())
@@ -62,7 +62,7 @@ function onProvinceClick(event) {
         const temperature = ((data.main.temp - 32) * (5/9)).toFixed(1);
         const description = data.weather[0].description;
         const iconCode = data.weather[0].icon;
-        const iconUrl = `http://openweathermap.org/img/w/${iconCode}.png`;
+        const iconUrl = `https://openweathermap.org/img/w/${iconCode}.png`;
         const message = `The current temperature in ${provinceTitle} is ${temperature}°C with ${description}.`;
         showModal(`${provinceTitle}`,`${temperature}`,`${description}`,`${iconUrl}`)
       } else {
