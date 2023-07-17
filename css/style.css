@@ -1,16 +1,19 @@
-body{
+body {
   background-color: lightcyan !important;
 }
 
-.container { 
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh; /* Ajusta la altura de la pantalla completa */
+  overflow: hidden; /* Evita el desbordamiento del contenido */
 }
 
 svg {
-    width: auto;
-    height: 80%;
+  width: auto;
+  height: 100%; /* Ajusta el alto al 100% del contenedor */
+  max-height: 100vh; /* Limita el alto máximo al de la pantalla */
 }
 
 path {
@@ -18,22 +21,20 @@ path {
   stroke-width: 1;
   cursor: pointer;
 }
-  
+
 path:hover {
   fill: rgba(0, 0, 0, 0.5);
 }
 
-
 /* Estilos del contenido del modal */
 .modal-content {
-  width: 80% !important;
+  width: 80%;
   margin: 10% auto;
   border: none;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
-
 
 .btn-close {
   color: #000;
@@ -44,7 +45,7 @@ path:hover {
 .btn-close:focus {
   color: #000;
   opacity: 1;
-}  
+}
 
 .modal-body {
   padding: 20px;
@@ -65,7 +66,7 @@ path:hover {
 }
 
 .modal-icon-container img {
-  height: 200%;
+  height: 100%;
 }
 
 #loading-container {
@@ -91,6 +92,31 @@ path:hover {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.forecast-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.forecast-col {
+  flex: 1;
+  text-align: center;
+}
+
+.forecast-item {
+  margin-bottom: 5px;
+}
+
+.forecast-icon {
+  width: 30px;
+  height: 30px;
 }
