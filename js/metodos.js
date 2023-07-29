@@ -17,7 +17,7 @@ function updatePaths() {
   paths.each(function() {
     const provinceTitle = this.getAttribute('title');
     const apiKey = atob("YzJlYjU4YTUzYmY2NmE4NjU5MjA4M2I0Y2RiOWQ2Nzc=");
-    const apiUrl = `http://api.weatherapi.com/v1/current.json?key=00414df992944f56877202743230307&q=${provinceTitle}&aqi=no&lang=es`;
+    const apiUrl = `https://api.weatherapi.com/v1/current.json?key=00414df992944f56877202743230307&q=${provinceTitle}&aqi=no&lang=es`;
 
     fetch(apiUrl)
       .then(response => response.json())
@@ -52,7 +52,7 @@ function addProvinceClickHandlers(paths) {
   function onProvinceClick(event) {
     const provinceTitle = event.target.getAttribute('title');
     const apiKey = atob("YzJlYjU4YTUzYmY2NmE4NjU5MjA4M2I0Y2RiOWQ2Nzc=");
-    const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=00414df992944f56877202743230307&q=${provinceTitle}&days=4&aqi=no&alerts=no&lang=es`;
+    const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=00414df992944f56877202743230307&q=${provinceTitle}&days=4&aqi=no&alerts=no&lang=es`;
   
     fetch(apiUrl)
       .then(response => response.json())
